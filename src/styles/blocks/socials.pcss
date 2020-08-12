@@ -7,12 +7,20 @@
       border: 1px solid currentColor;
       border-radius: 50%;
       margin-right: 19px;
+      &:hover {
+        border: 1px solid $hover-color;
+        .socials__icon {
+          fill: $hover-color;
+             
+         }
+      }
     }
     .socials__link {
       display: block;
       width: 100%;
       height: 100%;
       position: relative;
+
     }
     .socials__icon {
       width: 20px;
@@ -37,4 +45,8 @@
   width: 25px;
   height: 25px;
   fill: $text-color;
+  &:hover {
+    fill: $hover-color;
+    
+  }
 }
