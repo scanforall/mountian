@@ -1,6 +1,5 @@
 import Vue from "vue";
 
-
 const thumbs = {
   template: "#preview-thumbs"
 }
