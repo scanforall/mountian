@@ -71,7 +71,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 178px;
+  width: 176px;
 
 
   @include phones {
@@ -82,9 +82,9 @@
 .works-slider__thumb-item {
   height: 100px;
   transition: .2s;
-  &.active,
+  
   &:hover {
-    outline: 3px solid #f29400;
+    border: 3px solid #f29400;
   }
 }
 
@@ -172,17 +172,6 @@
   height: 100%;
 }
 
-.works-slider__tags {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 26px;
-}
-
-.works-slider__tag-item {
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
-
 .works-slider__title {
   font-size: 30px;
   margin-bottom: 42px;
@@ -202,6 +191,7 @@
 .works-slider__link {
   display: block;
 }
+
 
 
 .fade-enter-active, .fade-leave-active {

@@ -1,0 +1,33 @@
+.thumbs {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 186px;
+
+  @include phones {
+    display: none;
+  }
+}
+
+.thumb-item {
+  height: 100px;
+  transition: .2s;
+    &:hover {
+    outline: 3px solid #f29400;
+  }
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb-link {
+  display: block;
+  height: 100%;
+}
+
+.active {
+  outline: 3px solid #f29400
+}
