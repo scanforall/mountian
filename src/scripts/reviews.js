@@ -6,15 +6,26 @@ new Vue({
   el: "#slider-component",
   template: "#slider-container",
   components: {
-    Swiper, SwiperSlide
+    Swiper, 
+    SwiperSlide
   },
   data() {
     return {
       reviews: [],
       sliderOptions: {
-        slidesPerView: 2
+        slidesPerView: 2,
+        loop: false
+      },
+      buttons: {
+        prev: false,
+        next: true
       }
     };
+  },
+  computed: {
+    slider() {
+      return this.$refs["slider"].$swiper
+    }
   },
   methods: {
     requireImagesToArray(data) {
@@ -26,16 +37,24 @@ new Vue({
       });
     },
     slide(direction) {
-      const slider = this.$refs["slider"].$swiper;
-      switch(direction) {
-        case "next" :
-          slider.slideNext();
+      
+      switch (direction) {
+        case "next":
+          this.slider.slideNext();
           break;
-        case "prev" :
-          slider.slidePrev();
+        case "prev":
+          this.slider.slidePrev();
           break;
       }
-    }
+    },
+  },
+  mounted() {
+    this.slider.on("slideChange", (swiper) => {
+      this.buttons.prev = !swiper.isBeginning;
+      this.buttons.next = !swiper.isEnd;
+    });
+
+    console.log(this);
   },
   created() {
     const data = require("../data/reviews.json");
