@@ -27,12 +27,12 @@ script(type="text/x-template")#preview-display
             
 script(type="text/x-template")#preview-thumbs
   ul.thumbs
-    li.thumb-item(
+    li.thumb__item(
       v-for="slide in works" :key="slide.id"
       :class="{active: currentWork.id === slide.id}"
     )
-      button.thumb-link
-        img(:src="slide.photo").works-slider__thumb-pic
+      button.thumb__link
+        img(:src="slide.photo").__thumb-pic
 
 script(type="text/x-template")#preview-btns
   .works-slider__buttons

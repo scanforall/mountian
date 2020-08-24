@@ -2,19 +2,25 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 186px;
+  width: 160px;
 
   @include phones {
     display: none;
   }
 }
 
-.thumb-item {
+.thumb__item {
   height: 100px;
   transition: .2s;
+  overflow: hidden;
+  
     &:hover {
     outline: 3px solid #f29400;
   }
+}
+
+.thumb__pic {
+
 }
 
 .thumb {
@@ -23,9 +29,10 @@
   object-fit: cover;
 }
 
-.thumb-link {
+.thumb__link {
   display: block;
   height: 100%;
+  padding: 0;
 }
 
 .active {
