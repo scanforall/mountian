@@ -11,5 +11,23 @@ html(lang="en")
     .wrapper
       .maincontent
         block content
+    .sliding-window
+      button.close
+      .slide-container
+        .sliding-menu 
+          nav.menu
+            ul.menu__list.slide
+              - var menuLinks = ["Обо мне", "Навыки", "Работы", "Отзывы"];
+              each item in menuLinks 
+                li.menu__item.slide-item
+                  a(href="#").menu__link #{item}
+        .slide-socials
+          ul.socials
+              - var socials = ['insta', 'vk', 'github', 'envelope'];
+              each item in socials
+                li.socials__item
+                  a(href=`${item === 'envelope' ? 'mailto:sabantsev@yandex.ru' : '#'}`).socials__link
+                    +icon(item, 'socials__icon')
+        
 
     include ./templates/entry.pug

@@ -13,7 +13,8 @@ new Vue({
     return {
       reviews: [],
       sliderOptions: {
-        slidesPerView: 2,
+        slidesPerView: window.innerWidth < 480 ? 1 : 2,
+        
         loop: false
       },
       buttons: {
@@ -54,7 +55,9 @@ new Vue({
       this.buttons.next = !swiper.isEnd;
     });
 
-    console.log(this);
+    
+
+    
   },
   created() {
     const data = require("../data/reviews.json");

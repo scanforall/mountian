@@ -1,0 +1,33 @@
+.humburger {
+  display: block;
+  width: 30px;
+  height: 26px;
+  border-top: 5px solid #464E62;
+  border-bottom: 5px solid #464E62;
+
+  &:before {
+    
+    content: "";
+    position: relative;
+    top: 5px;
+    left: 0px;
+    width: 100%;
+    border-top: 5px solid #464E62;
+  }
+  
+  @include desktopHd {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+  
+  @include tablets {
+    display: flex;
+  }
+  
+  @include phones {
+    display: flex;
+  }
+}
