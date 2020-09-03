@@ -60,8 +60,8 @@ export default {
     }
   },
   components: {
-    icon: () => import("components/icon"),
-    appInput: () => import("components/input")
+    icon: () => import("../icon/icon"),
+    appInput: () => import("../input/input")
   }
 };
 </script>
